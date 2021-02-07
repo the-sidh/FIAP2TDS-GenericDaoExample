@@ -36,6 +36,7 @@ dependencies {
     compile 'org.hibernate:hibernate-core:5.4.27.Final'
     compile 'org.hibernate:hibernate-entitymanager:5.4.27.Final'
     compile 'org.hibernate.javax.persistence:hibernate-jpa-2.1-api:1.0.0.Final'
+    compile 'com.h2database:h2:1.4.198'
 
     testCompile 'org.junit.jupiter:junit-jupiter:5.4.1'
     testCompile 'com.h2database:h2:1.4.198'
