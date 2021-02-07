@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DatabaseSettingsState">
+    <option name="database" value="smartcities" />
+    <option name="driverClass" value="org.h2.Driver" />
+    <option name="driverPath" value="$USER_HOME$/Downloads/h2/bin/h2-1.4.200.jar" />
+    <option name="url" value="jdbc:h2:tcp://localhost/~/test  " />
+  </component>
+</project>
