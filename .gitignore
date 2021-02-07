@@ -4,8 +4,8 @@
 application.properties
 logs/app.log
 libs
-activemq-data/
 /target/
+./bin
 
 ### IntelliJ IDEA ###
 .idea/
