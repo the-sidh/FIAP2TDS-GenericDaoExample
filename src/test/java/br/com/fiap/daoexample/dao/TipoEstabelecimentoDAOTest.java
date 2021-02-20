@@ -23,9 +23,8 @@ public class TipoEstabelecimentoDAOTest {
         System.out.println("SessionFactory destroyed");
     }
 
-
     @Test()
-    @DisplayName("dado um tipo de estabelecimento, quando tenta gravar , deve cadastrar o tipo de estabelecimento no banco")
+    @DisplayName("dado um tipo de estabelecimento, quando tenta gravar , deve recuperar o tipo de estabelecimento no banco")
     public void cadastrarBuscar() {
         TipoEstabelecimentoDAO dao = new TipoEstabelecimentoDAO(em);
         TipoEstabelecimento tipo = new TipoEstabelecimento();
@@ -39,5 +38,24 @@ public class TipoEstabelecimentoDAOTest {
             e.printStackTrace();
         }
     }
-
+    @Test()
+    @DisplayName("dado um tipo de estabelecimento, quando tenta remover , deve remover o tipo de estabelecimento no banco")
+    public void cadastrarDeletarBuscar() {
+        TipoEstabelecimentoDAO dao = new TipoEstabelecimentoDAO(em);
+        TipoEstabelecimento tipo = new TipoEstabelecimento();
+        tipo.setNome("Bar e Restaurante");
+        dao.cadastrar(tipo);
+        try {
+            dao.commit();
+            TipoEstabelecimento inserted = dao.buscar(1);
+            Assertions.assertEquals(tipo.getNome(), inserted.getNome());
+            dao.excluir(inserted.getId());
+            TipoEstabelecimento deleted = dao.buscar(1);
+            Assertions.assertNotNull(deleted);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+   
+    
 }

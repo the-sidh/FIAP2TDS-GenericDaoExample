@@ -31,14 +31,12 @@ apply plugin: 'application'
 mainClassName = 'br.com.fiap.daoexample.main.app'
 
 dependencies {
-    compile 'com.zaxxer:HikariCP:3.3.1'
-
     compile 'org.hibernate:hibernate-core:5.4.27.Final'
     compile 'org.hibernate:hibernate-entitymanager:5.4.27.Final'
     compile 'org.hibernate.javax.persistence:hibernate-jpa-2.1-api:1.0.0.Final'
     compile 'com.h2database:h2:1.4.198'
-
-    testCompile 'org.junit.jupiter:junit-jupiter:5.4.1'
+    
+    testCompile 'org.junit.jupiter:junit-jupiter:5.6.0'
     testCompile 'com.h2database:h2:1.4.198'
     testCompile "org.flywaydb:flyway-core:5.2.4"
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlin_version"
